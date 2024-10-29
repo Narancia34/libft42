@@ -6,18 +6,12 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:11:10 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/28 13:30:53 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:54:29 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int isdelimiter(char c1, char c2)
-{
-    if(c1 == c2)
-        return (1);
-    return (0);
-}
-int splitcount(char *s, char c)
+int splitcount(char const *s, char c)
 {
     int i;
     int count;
@@ -38,17 +32,35 @@ int splitcount(char *s, char c)
 char **ft_split(char const *s, char c)
 {
     int i;
-    int count;
+    int slen;
     char **strs;
     
     i = 0;
-    count = splitcount(s, c);
-    strs = (char **)malloc(sizeof(char *) * count);
-    while(s[i])
+    strs = (char **)malloc(sizeof(char *) * splitcount(s, c));
+    if(!strs || !s)
+        return (0);
+    while(*s)
     {
-        if(isdelimiter(s[i], c) && !isdelimiter(s[i +1 ], c))
-        {
-            
-        }
+        while(*s == c && *s)
+            s++;
+        if(!ft_strchr(s, c))
+            slen = ft_strlen(s);
+        else
+            slen = ft_strchr(s, c) - s;
+        strs[i++] = ft_substr(s, 0, slen);
+        s += slen;
+    }
+    strs[i] = NULL;
+    return (strs);
+}
+int main ()
+{
+    char const *s = "test ab c d";
+    int i = 0;
+    char **strs = ft_split(s, ' ');
+    while(strs[i])
+    {
+        printf("%s.\n", strs[i]);
+        i++;
     }
 }

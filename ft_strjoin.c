@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:22:58 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/25 13:43:57 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:07:49 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     int i = 0;
     int j = 0;
 
-    total_len = ft_strlen(s1) + ft_strlen(s2);
+    total_len = ft_strlen(s1) + ft_strlen(s2) + 1;
     str = (char *)malloc(total_len * sizeof(char));
     if (!str)
         return(NULL);

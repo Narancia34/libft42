@@ -6,11 +6,12 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:35:10 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/25 13:44:48 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:06:20 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strlen(const char *s)
+#include "libft.h"
+size_t	ft_strlen(const char *s)
 {
 	int i;
 

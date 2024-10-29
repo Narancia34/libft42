@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:01:26 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/25 13:47:52 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:45:22 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     }
     return sub;
 }
-int main ()
+/*int main ()
 {
     unsigned int start = 4;
     size_t len = 4;
     char const *s = "hellooo!!";
     printf("%s", ft_substr(s, start, len));
-}
+}*/
