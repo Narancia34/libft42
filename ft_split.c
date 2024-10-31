@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:11:10 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/30 10:50:28 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:18:09 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char **ft_split(char const *s, char c)
     strs[i] = NULL;
     return (strs);
 }
-int main ()
+/*int main ()
 {
     char const *s = "t est ab c d";
     int i = 0;
@@ -63,4 +63,4 @@ int main ()
         printf("%s.\n", strs[i]);
         i++;
     }
-}
+}*/

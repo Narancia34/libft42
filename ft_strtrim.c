@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 12:02:13 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 11:47:16 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:17:30 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ char *ft_strtrim(char const *s1, char const *set)
     str[i] = '\0';
     return(str);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     char const *s1 = "rrtktrhellorrtltrlt";
     char const *set = "tlr";
     printf("%s", ft_strtrim(s1, set));
-}
+}*/

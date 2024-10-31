@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:12:11 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 11:33:59 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 16:47:38 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include "libft.h"
 void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    if (lst == NULL)
-        return (NULL);
+    /*if (lst == NULL)
+        return (NULL);*/
     while(lst->next != NULL)
     {
         f(lst->content);

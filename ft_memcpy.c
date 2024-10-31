@@ -6,12 +6,12 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:56:17 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 10:01:20 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:47:49 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	if (dst == NULL || src == NULL)
 		return NULL;

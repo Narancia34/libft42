@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:57:34 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 11:35:31 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 16:47:57 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int ft_lstsize(t_list *lst)
 {
     int i;
     if (lst == NULL)
-        return (NULL);
+        return (0);
 
     i = 0;
     while(lst->next != NULL)
