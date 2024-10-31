@@ -6,14 +6,18 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 10:38:49 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/25 10:44:44 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:40:45 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    int i = 0;
+    int i;
+    if (!s)
+        return (0);
+        
+    i = 0;
     while(s[i])
     {
         f(i, &s[i]);

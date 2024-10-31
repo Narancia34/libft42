@@ -6,18 +6,25 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 10:16:14 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/25 10:27:17 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:43:40 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int i = 0;
-    int len = 0;
+    int i;
+    int len;
+    if(!s)
+        return(0);
+    
+    i = 0;
+    len = 0;
     while(s[len])
         len++;
     char *str = (char *)malloc(sizeof(char) * len + 1);
+    if (!str)
+        return (0);
     while(str[i])
     {
         str[i] = f(i, s[i]);

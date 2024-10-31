@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:38:11 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/25 13:48:07 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:04:21 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ char	ft_tolower(int c)
 {
 	if(c >= 'A' && c <= 'Z')
 		c += 32;
-	return c;
+	return (c);
 }

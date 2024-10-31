@@ -6,12 +6,12 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:24:50 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/25 16:50:54 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:25:02 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int count_digit(int n)
+int count_digit(long n)
 {
     int count;
     
@@ -39,6 +39,8 @@ char    *ft_itoa(int n)
     len = count_digit(num);
     i = 0;
     result = (char *)malloc((len * sizeof(char)));
+    if(!result)
+        return (NULL);
     if (num < 0)
     {
         result[0] = '-';
@@ -57,5 +59,5 @@ char    *ft_itoa(int n)
 #include <stdio.h>
 int main ()
 {
-    printf("%s", ft_itoa(-14367282));
+    printf("%s", ft_itoa(-2147483648));
 }

@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 12:02:13 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/28 13:20:23 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:47:16 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char *ft_strtrim(char const *s1, char const *set)
     int end;
     int i;
     char *str;
+    if (s1 == NULL || set == NULL)
+        return (NULL);
     
     start = 0;
     end = ft_strlen(s1);

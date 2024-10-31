@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:57:55 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/28 10:09:32 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:32:53 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 void ft_lstclear(t_list **lst, void (*del)(void *))
 {
     t_list *tmp;
+    if (lst == NULL)
+        return (NULL);
     
     while (*lst)
     {

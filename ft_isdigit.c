@@ -6,13 +6,13 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:07:17 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/28 10:26:50 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 09:55:30 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }

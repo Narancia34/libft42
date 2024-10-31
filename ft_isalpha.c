@@ -6,13 +6,13 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:47:08 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/28 10:26:28 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/10/31 09:55:06 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return 1;
-   return 0;	
+		return (1);
+   return (0);	
 }
