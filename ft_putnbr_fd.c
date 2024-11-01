@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 11:58:17 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/01 12:02:50 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/01 12:10:52 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void ft_putnbr_fd(int n, int fd)
         ft_putchar_fd('-', fd);
         num *= -1;
     }
-    if(num > 9)
+    if(num >= 9)
         ft_putnbr_fd(num / 10, fd);
-    ft_putchar_fd(num % 10, fd);
+    ft_putchar_fd((num % 10) + '0', fd);
 }
