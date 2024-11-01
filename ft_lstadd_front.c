@@ -6,16 +6,14 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 16:47:16 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/01 14:21:13 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-void    ft_lstadd_front(t_list **lst, t_list *new)
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    /*if (lst == NULL || new == NULL)
-        return (NULL);*/
-    new->next = (*lst);
-    *lst = new;
+	new->next = (*lst);
+	*lst = new;
 }

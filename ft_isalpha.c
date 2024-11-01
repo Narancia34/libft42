@@ -6,13 +6,15 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:47:08 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 09:55:06 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:27:57 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
-   return (0);	
+	return (0);
 }

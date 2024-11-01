@@ -6,11 +6,12 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:56:18 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 10:09:39 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:30:12 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
 	while (*s != '\0')

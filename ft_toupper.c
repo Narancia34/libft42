@@ -6,13 +6,15 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:30:23 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 10:04:02 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:47:34 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	ft_toupper(int c)
 {
-	if(c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		c -= 32;
 	return (c);
 }

@@ -6,52 +6,53 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:11:10 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 15:18:09 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/01 14:03:38 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int splitcount(char const *s, char c)
-{
-    int i;
-    int count;
 
-    i = 0;
-    count = 0;
-    if(s[0] != c && s[0] != '\0')
-        count++;
-    while(s[i])
-    {
-        if(s[i - 1] == c && s[i] != c)
-            count++;
-        i++;
-    }
-    return (count);
+int	splitcount(char const *s, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	if (s[0] != c && s[0] != '\0')
+		count++;
+	while (s[i])
+	{
+		if (s[i - 1] == c && s[i] != c)
+			count++;
+		i++;
+	}
+	return (count);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-    int i;
-    int slen;
-    char **strs;
-    
-    i = 0;
-    strs = (char **)malloc(sizeof(char *) * (splitcount(s, c) + 1));
-    if(!strs || !s)
-        return (0);
-    while(*s)
-    {
-        while(*s == c && *s)
-            s++;
-        if(!ft_strchr(s, c))
-            slen = ft_strlen(s);
-        else
-            slen = ft_strchr(s, c) - s;
-        strs[i++] = ft_substr(s, 0, slen);
-        s += slen;
-    }
-    strs[i] = NULL;
-    return (strs);
+	int		i;
+	int		slen;
+	char	**strs;
+
+	i = 0;
+	strs = (char **)malloc(sizeof(char *) * (splitcount(s, c) + 1));
+	if (!strs || !s)
+		return (0);
+	while (*s)
+	{
+		while (*s == c && *s)
+			s++;
+		if (!ft_strchr(s, c))
+			slen = ft_strlen(s);
+		else
+			slen = ft_strchr(s, c) - s;
+		strs[i++] = ft_substr(s, 0, slen);
+		s += slen;
+	}
+	strs[i] = NULL;
+	return (strs);
 }
 /*int main ()
 {

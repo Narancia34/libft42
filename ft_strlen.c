@@ -6,17 +6,18 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:35:10 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 16:32:32 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:37:04 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 size_t	ft_strlen(const char *s)
 {
 	int	i;
-	if(s == NULL)
-		return (0);
 
+	if (s == NULL)
+		return (0);
 	i = 0;
 	while (s[i])
 		i++;

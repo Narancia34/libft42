@@ -6,11 +6,12 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:26:19 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 16:34:13 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:39:33 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
@@ -19,6 +20,6 @@ void	ft_bzero(void *s, size_t n)
 	while (i < n)
 	{
 		((char *)s)[i] = '\0';
-		i++;		
+		i++;
 	}
 }
