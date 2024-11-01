@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 09:42:18 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/10/31 15:19:06 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/01 09:42:30 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	ft_atoi(const char *str)
 		return (num * -1);    
 	return (num);
 }
-/*int main()
+int main()
 {
-	char *s1 = "   885858987045876485";
+	char *s1 = "   -3573467885858987045876485";
 	printf("%i\n", atoi(s1));
 	printf("%i", ft_atoi(s1));
-}*/
+}
