@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:24:50 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/01 14:04:33 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/02 14:57:24 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 	num = n;
 	len = count_digit(num);
 	i = 0;
-	result = (char *)malloc((len * sizeof(char)));
+	result = (char *)malloc(((len + 1) * sizeof(char)));
 	if (!result)
 		return (NULL);
 	if (num < 0)
@@ -49,10 +49,10 @@ char	*ft_itoa(int n)
 		num *= -1;
 		i = 1;
 	}
+	result[len] = '\0';
 	while (i < len)
 	{
-		len--;
-		result[len] = (num % 10) + '0';
+		result[len--] = (num % 10) + '0';
 		num /= 10;
 	}
 	return (result);

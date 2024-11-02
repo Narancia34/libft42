@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:57:34 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/01 14:13:18 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/02 13:35:30 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 int	ft_lstsize(t_list *lst)
 {
 	int	i;
+	t_list *node;
 
-	if (lst == NULL)
+	if (!lst)
 		return (0);
 	i = 0;
-	while (lst->next != NULL)
+	node = lst;
+	while (node->next != NULL)
 	{
-		lst = lst->next;
 		i++;
+		node = node->next;
 	}
 	return (i);
 }

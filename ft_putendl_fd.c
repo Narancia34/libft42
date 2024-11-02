@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:09:11 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/01 14:09:07 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/02 13:05:32 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if(!s)
+		return;
 	ft_putstr_fd(s, fd);
-	write(1, "\n", 1);
+	write(fd, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:41:56 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/01 13:55:58 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/02 14:45:46 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,10 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*ptr;
-	size_t	i;
 
-	i = 0;
-	ptr = (char *)malloc(count * size);
+	ptr = (void *)malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	while (i < count * size)
-		ptr[i++] = '0';
+	ft_bzero(ptr, (count * size));
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:47:23 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/01 13:29:41 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/02 13:12:36 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *str, int ch)
 {
 	while (*str != '\0')
 	{
-		if (*str == ch)
+		if (*str == (char)ch)
 			return ((char *)str);
 		str++;
 	}
