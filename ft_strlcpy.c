@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 09:28:37 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/02 14:09:22 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/03 15:30:08 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
     size_t i;
-    
-	if (!dst || !src)
-    	return (0);
+
     i = 0;
     if (dstsize != 0)
     {

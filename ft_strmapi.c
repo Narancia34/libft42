@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 10:16:14 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/02 13:32:24 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/03 16:54:29 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int		len;
 	char	*str;
 
-	if (!s)
+	if (!s || !f)
 		return (0);
 	i = 0;
 	len = 0;
@@ -34,4 +34,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	str[i] = '\0';
 	return (str);
-}
+} 
