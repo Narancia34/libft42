@@ -50,10 +50,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-/*#include <stdio.h>
-int main()
+/*int main()
 {
     char const *s1 = "rrtktrhellorrtltrlt";
-    char const *set = "tlr";
+    char const *set = "tlkr";
     printf("%s", ft_strtrim(s1, set));
 }*/

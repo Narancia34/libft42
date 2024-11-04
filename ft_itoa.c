@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:24:50 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/02 14:57:24 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/04 11:54:09 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,11 @@ char	*ft_itoa(int n)
 		i = 1;
 	}
 	result[len] = '\0';
-	while (i < len)
+	len--;
+	while (i <= len)
 	{
 		result[len--] = (num % 10) + '0';
 		num /= 10;
 	}
 	return (result);
 }
-/*int main ()
-{
-	printf("%s", ft_itoa(857978048));
-}*/

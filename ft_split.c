@@ -6,13 +6,13 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:11:10 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/03 14:13:39 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:38:54 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	splitcount(char const *s, char c)
+static size_t	splitcount(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -28,6 +28,19 @@ int	splitcount(char const *s, char c)
 		i++;
 	}
 	return (count);
+}
+static int	needfree(char **strs, int i)
+{
+	int	j;
+
+	j = 0;
+	while (j <= i)
+	{
+		free(strs[j]);
+		j++;
+	}
+	free(strs);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -49,6 +62,8 @@ char	**ft_split(char const *s, char c)
 		else
 			slen = ft_strchr(s, c) - s;
 		strs[i++] = ft_substr(s, 0, slen);
+		if (!strs[i - 1])
+			needfree(strs, i);
 		s += slen;
 	}
 	strs[i] = NULL;
