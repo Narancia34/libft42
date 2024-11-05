@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:48:45 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/04 10:27:46 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:53:13 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f || !del)
 		return (NULL);
-	head = ft_lstnew(f(lst->content))
+	head = ft_lstnew(f(lst->content));
 	if(!head)	
 		return (NULL);
 	lst = lst->next;
