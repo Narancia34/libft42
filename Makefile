@@ -18,7 +18,7 @@ BOFILES =	$(BSRCS:.c=.o)
 
 $(NAME): $(OFILES)
 
-all: $(NAME) bonus
+all: $(NAME)
 
 %.o: %.c
 	$(CC) -c $(FLAGS) $< -o $@

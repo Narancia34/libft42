@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:24:50 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/04 11:54:09 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:34:46 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,11 @@ int	count_digit(long n)
 	}
 	return (count);
 }
-
-char	*ft_itoa(int n)
+char *convert(char *result, int len, long num)
 {
-	long	num;
-	int		len;
-	int		i;
-	char	*result;
+	int	i;
 
-	num = n;
-	len = count_digit(num);
 	i = 0;
-	result = (char *)malloc(((len + 1) * sizeof(char)));
-	if (!result)
-		return (NULL);
 	if (num < 0)
 	{
 		result[0] = '-';
@@ -57,4 +48,27 @@ char	*ft_itoa(int n)
 		num /= 10;
 	}
 	return (result);
+}
+
+char	*ft_itoa(int n)
+{
+	long	num;
+	int		len;
+	int		i;
+	char	*result;
+
+	num = n;
+	if (num == 0)
+		return ("0");
+	len = count_digit(num);
+	i = 0;
+	result = (char *)malloc(((len + 1) * sizeof(char)));
+	if (!result)
+		return (NULL);
+	return (convert(result, len, num));
+}
+int main()
+{
+	int i = 0;
+	printf("%s", ft_itoa(i));
 }
