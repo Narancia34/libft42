@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 11:58:17 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/05 14:06:48 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:01:52 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	nb = n;
 	if (nb < 0)
 	{
-		write(fd, '-', 1);
+		write(fd, "-", 1);
 		nb *= -1;
 	}
 	if (nb > 9)
