@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:11:10 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/04 20:42:07 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:16:46 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ static size_t	splitcount(char const *s, char c)
 	}
 	return (count);
 }
+
 static int	needfree(char **strs, int i)
 {
 	int	j;
@@ -43,40 +44,67 @@ static int	needfree(char **strs, int i)
 	return (0);
 }
 
+static int	checkdel(const char **s, char c)
+{
+	while (**s == c && *s)
+		(*s)++;
+	if (**s == '\0')
+		return (0);
+	return (1);
+}
+
+static int	countlen(const char *s, char c)
+{
+	int	len;
+
+	if (!ft_strchr(s, c))
+		len = ft_strlen(s);
+	else
+		len = ft_strchr(s, c) - s;
+	return (len);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		slen;
 	char	**strs;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	strs = (char **)malloc(sizeof(char *) * (splitcount(s, c) + 1));
-	if (!strs || !s)
+	if (!strs)
 		return (0);
 	while (*s)
 	{
-		while (*s == c && *s)
-			s++;
-		if (!ft_strchr(s, c))
-			slen = ft_strlen(s);
-		else
-			slen = ft_strchr(s, c) - s;
+		if (checkdel(&s, c) == 0)
+			break ;
+		slen = countlen(s, c);
 		strs[i++] = ft_substr(s, 0, slen);
 		if (!strs[i - 1])
+		{
 			needfree(strs, i);
+			return (NULL);
+		}
 		s += slen;
 	}
 	strs[i] = NULL;
 	return (strs);
 }
-int main ()
-{
-    char const *s = "test test test";
-    int i = 0;
-    char **strs = ft_split(s, ' ');
-    while(strs[i])
-    {
-        printf("%s.\n", strs[i]);
-        i++;
-    }
-}
+
+// int	main(void)
+// {
+// 	char const	*s;
+// 	int			i;
+// 	char		**strs;
+
+// 	i = 0;
+// 	s = "test test test  ";
+// 	strs = ft_split(s, 'r');
+// 	while (strs[i])
+// 	{
+// 		printf("%s.\n", strs[i]);
+// 		i++;
+// 	}
+// }
