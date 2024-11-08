@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:30:13 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/04 15:43:09 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/08 10:29:54 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	return (dst);
 }
-#include <string.h>
-int main() {
-    ft_memmove(NULL, NULL, 5);
+// #include <string.h>
+// int main() {
+//     ft_memmove(NULL, NULL, 5);
 
-    return 0;
-}
+//     return 0;
+// }

@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:24:50 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/06 14:34:46 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/08 10:28:22 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ char	*ft_itoa(int n)
 		return (NULL);
 	return (convert(result, len, num));
 }
-int main()
-{
-	int i = 0;
-	printf("%s", ft_itoa(i));
-}
+// int main()
+// {
+// 	int i = 0;
+// 	printf("%s", ft_itoa(i));
+// }

@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:41:56 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/02 14:45:46 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/08 10:27:37 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, (count * size));
 	return (ptr);
 }
-int main()
-{	
-	ft_calloc(97462506983406, 3);
-}
+// int main()
+// {	
+// 	ft_calloc(97462506983406, 3);
+// }
