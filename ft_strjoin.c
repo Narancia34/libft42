@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:22:58 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/08 10:33:34 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:32:28 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-/*int main()
-{
-    char const *s1 = "steel";
-    char const *s2 = "ball";
-    printf("%s", ft_strjoin(s1, s2));
-}*/

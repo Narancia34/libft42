@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:56:18 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/02 14:30:50 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/07 09:33:03 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
 	while (i >= 0)
 	{

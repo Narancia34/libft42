@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:47:23 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/02 13:12:36 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:47:07 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@ char	*ft_strchr(const char *str, int ch)
 			return ((char *)str);
 		str++;
 	}
+	if ((char)ch == '\0')
+		return ((char *)str);
 	return (0);
 }

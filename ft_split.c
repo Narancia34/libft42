@@ -6,7 +6,7 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:11:10 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/07 17:16:46 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/08 10:31:47 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static size_t	splitcount(char const *s, char c)
 	int	i;
 	int	count;
 
+	if (!s)
+		return (0);
 	i = 0;
 	count = 0;
 	if (s[0] != c && s[0] != '\0')
@@ -30,7 +32,7 @@ static size_t	splitcount(char const *s, char c)
 	return (count);
 }
 
-static int	needfree(char **strs, int i)
+static void	needfree(char **strs, int i)
 {
 	int	j;
 
@@ -41,16 +43,6 @@ static int	needfree(char **strs, int i)
 		j++;
 	}
 	free(strs);
-	return (0);
-}
-
-static int	checkdel(const char **s, char c)
-{
-	while (**s == c && *s)
-		(*s)++;
-	if (**s == '\0')
-		return (0);
-	return (1);
 }
 
 static int	countlen(const char *s, char c)
@@ -64,6 +56,15 @@ static int	countlen(const char *s, char c)
 	return (len);
 }
 
+static int	checkdel(const char **s, char c)
+{
+	while (**s == c && *s)
+		(*s)++;
+	if (**s == '\0')
+		return (0);
+	return (1);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -75,7 +76,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	strs = (char **)malloc(sizeof(char *) * (splitcount(s, c) + 1));
 	if (!strs)
-		return (0);
+		return (NULL);
 	while (*s)
 	{
 		if (checkdel(&s, c) == 0)
@@ -92,19 +93,3 @@ char	**ft_split(char const *s, char c)
 	strs[i] = NULL;
 	return (strs);
 }
-
-// int	main(void)
-// {
-// 	char const	*s;
-// 	int			i;
-// 	char		**strs;
-
-// 	i = 0;
-// 	s = "test test test  ";
-// 	strs = ft_split(s, 'r');
-// 	while (strs[i])
-// 	{
-// 		printf("%s.\n", strs[i]);
-// 		i++;
-// 	}
-// }

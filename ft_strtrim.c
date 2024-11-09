@@ -6,13 +6,13 @@
 /*   By: mgamraou <mgamraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 12:02:13 by mgamraou          #+#    #+#             */
-/*   Updated: 2024/11/01 14:01:55 by mgamraou         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:04:34 by mgamraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	charinset(char c, char const *set)
+static int	charinset(char c, char const *set)
 {
 	int	i;
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	char	*str;
 
-	if (s1 == NULL || set == NULL)
+	if (!s1 || !set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1);
@@ -50,9 +50,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-/*int main()
-{
-    char const *s1 = "rrtktrhellorrtltrlt";
-    char const *set = "tlkr";
-    printf("%s", ft_strtrim(s1, set));
-}*/
